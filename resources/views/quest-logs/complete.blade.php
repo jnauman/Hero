@@ -1,8 +1,6 @@
 <x-app-layout>
 	<x-slot name="header">
-		<span class="font-extrabold text-3xl text-seance-200 leading-tight">
-			{{ __('Complete Quest: ') }} {{ $questLog->quest->title }}
-		</span>
+		{{ __('Complete Quest: ') }} {{ $questLog->quest->title }}
 	</x-slot>
 	<div class="py-12">
 		<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -22,7 +20,7 @@
 
 					<div class="mb-4">
 						<label for="completion_details" class="block text-gray-700 text-sm font-bold mb-2">Completion Details:</label>
-						<textarea name="completion_details" placeholder="Describe how you completed the quest" class="form-textarea w-full" rows="5"></textarea>
+						<textarea name="completion_details" placeholder="Describe how you completed the quest" class="tinymce-basic form-textarea w-full" rows="5"></textarea>
 						@error('completion_details')
 						<p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
 						@enderror
